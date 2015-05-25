@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
-    <title>Formulário de Aluno</title>
+    <title>Ficha de Inscrição</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/roboto.min.css" rel="stylesheet" />
     <link href="Content/material-fullpalette.min.css" rel="stylesheet" />
@@ -11,10 +11,10 @@
 </head>
 <body class="container">
     <div>
-        <div class="row">
+        <div class="row" id="row">
             <div class="col-lg-12">
                 <div class="page-header">
-                    <h1 id="forms">Formulário de Aluno</h1>
+                    <h1 id="forms">Ficha de Inscrição</h1>
                 </div>
             </div>
         </div>
@@ -22,204 +22,246 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="well" style="width: 150%">
+                    <section id="sectionDivAlertSuccess" style="display: none">
+                        <div class="alert alert-dismissible alert-success">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <h4>Parabéns!</h4>
+                            <p>Seu cadastro foi concluido com sucesso, verifique mais informações em seu e-mail.</p>
+                        </div>
+                    </section>
                     <form class="form-horizontal">
                         <fieldset>
-                            <legend>Dados Pessoais</legend>
-                            <div class="form-group">
-                                <label for="inputNome" class="col-lg-3 control-label">Nome</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputNome" placeholder="Nome">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputNomedoMeio" class="col-lg-3 control-label">Nome do Meio</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputNomedoMeio" placeholder="Nome do Meio">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputSobrenome" class="col-lg-3 control-label">Sobrenome</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputDataDeNascimento" class="col-lg-3 control-label">Data de Nascimento</label>
-                                <div class="col-md-9">
-                                    <input type="text" id="inputDataDeNascimento" class="form-control empty" placeholder="Data de Nascimento">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputSobrenome" class="col-lg-3 control-label">Sobrenome</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-lg-3 control-label">Sexo</label>
-                                <div class="col-lg-9">
-                                    <div class="radio radio-primary">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
-                                            Masculino ( M )
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
-                                            Feminino ( F )
-                                        </label>
+                            <section id="sectionAluno">
+                                <legend>Dados Pessoais</legend>
+                                <div class="form-group">
+                                    <label for="inputNome" class="col-lg-3 control-label">Nome</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputNome" placeholder="Nome">
                                     </div>
                                 </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label class="col-lg-3 control-label">Estado Civil</label>
-                                <div class="col-lg-9">
-                                    <div class="radio radio-primary">
-                                        <label>
-                                            <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
-                                            Solteiro(a)
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary">
-                                        <label>
-                                            <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
-                                            Casado(a)
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary">
-                                        <label>
-                                            <input type="radio" name="optionsRadios1" id="optionsRadios3" value="option3"><span class="circle"></span><span class="check"></span>
-                                            Divorciado(a)
-                                        </label>
+                                <div class="form-group">
+                                    <label for="inputNomedoMeio" class="col-lg-3 control-label">Nome do Meio</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputNomedoMeio" placeholder="Nome do Meio">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputRg" class="col-lg-3 control-label">RG</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputRg" placeholder="RG">
+                                <div class="form-group">
+                                    <label for="inputSobrenome" class="col-lg-3 control-label">Sobrenome</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputCpf" class="col-lg-3 control-label">CPF</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputCpf" placeholder="CPF">
+                                <div class="form-group">
+                                    <label for="inputDataDeNascimento" class="col-lg-3 control-label">Data de Nascimento</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="inputDataDeNascimento" class="form-control empty" placeholder="Data de Nascimento">
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Sexo</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
+                                                Masculino ( M )
+                                            </label>
+                                        </div>
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
+                                                Feminino ( F )
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <legend>Contatos</legend>
-                            <div class="form-group">
-                                <label for="inputEmail" class="col-lg-3 control-label">Email</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Estado Civil</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
+                                                Solteiro(a)
+                                            </label>
+                                        </div>
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
+                                                Casado(a)
+                                            </label>
+                                        </div>
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios1" id="optionsRadios3" value="option3"><span class="circle"></span><span class="check"></span>
+                                                Divorciado(a)
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputTelefone" class="col-lg-3 control-label">Telefone</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputTelefone" placeholder="Telefone">
+                                <div class="form-group">
+                                    <label for="inputRg" class="col-lg-3 control-label">RG</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputRg" placeholder="RG">
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <label for="inputCpf" class="col-lg-3 control-label">CPF</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputCpf" placeholder="CPF">
+                                    </div>
+                                </div>
+                                <legend>Contatos</legend>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-3 control-label">Email</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputTelefone" class="col-lg-3 control-label">Telefone</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputTelefone" placeholder="Telefone">
+                                    </div>
+                                </div>
 
-                            <legend>Endereço</legend>
-                            <div class="form-group">
-                                <label for="select" class="col-lg-3 control-label">Local</label>
-                                <div class="col-lg-9">
-                                    <select class="form-control" id="select">
-                                        <option value="Avenida">Avenida</option>
-                                        <option value="Estrada">Estrada</option>
-                                        <option value="Rua">Rua</option>
-                                    </select>
+                                <legend>Endereço</legend>
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Local</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="select">
+                                            <option value="Avenida">Avenida</option>
+                                            <option value="Estrada">Estrada</option>
+                                            <option value="Rua">Rua</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputRua" class="col-lg-3 control-label">Rua</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputRua" placeholder="Rua">
+                                <div class="form-group">
+                                    <label for="inputRua" class="col-lg-3 control-label">Rua</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputRua" placeholder="Rua">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputNumero" class="col-lg-3 control-label">Nº</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputNumero" placeholder="Numero">
+                                <div class="form-group">
+                                    <label for="inputNumero" class="col-lg-3 control-label">Nº</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputNumero" placeholder="Numero">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputBairro" class="col-lg-3 control-label">Bairro</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
+                                <div class="form-group">
+                                    <label for="inputBairro" class="col-lg-3 control-label">Bairro</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputCEP" class="col-lg-3 control-label">CEP</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputCEP" placeholder="CEP">
+                                <div class="form-group">
+                                    <label for="inputCEP" class="col-lg-3 control-label">CEP</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputCEP" placeholder="CEP">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputCidade" class="col-lg-3 control-label">Cidade</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+                                <div class="form-group">
+                                    <label for="inputCidade" class="col-lg-3 control-label">Cidade</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEstado" class="col-lg-3 control-label">Estado</label>
-                                <div class="col-lg-9">
-                                    <select class="form-control" id="inputEstado">
-                                        <option value="SP">São Paulo</option>
-                                        <option value="RJ">Rio de Janeiro</option>
-                                    </select>
+                                <div class="form-group">
+                                    <label for="inputEstado" class="col-lg-3 control-label">Estado</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="inputEstado">
+                                            <option value="SP">São Paulo</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="form-group" id="sectionBtnContinuar">
+                                    <div class="col-lg-10 col-lg-offset-2">
+                                        <a id="btnContinuar" href="#sectionInstituicao" class="btn btn-primary">Continuar</a>
+                                    </div>
+                                </div>
+
+                            </section>
+                            <section id="sectionInstituicao" style="display: none">
+                                <legend>Dados do Curso</legend>
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Nome do Curso</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="select">
+                                            <option value="1">Curso Licenciatura em Linguagens</option>
+                                            <option value="2">Curso Linguagens</option>
+                                            <option value="3">Curso Licenciatura</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Período Letivo</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="select">
+                                            <option value="1501">1º semeste de 2015</option>
+                                            <option value="1502">2º semeste de 2015</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Campus</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="select">
+                                            <option value="A">Campus A</option>
+                                            <option value="B">Campus B</option>
+                                            <option value="C">Campus C</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputIncricao" class="col-lg-3 control-label">Nº de inscrição do ENEM</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputIncricao" placeholder="Número de Inscrição">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Tipo de Admisão</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="select">
+                                            <option value="1">Vestibular</option>
+                                            <option value="2">ENEM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Turno Acadêmico</label>
+                                    <div class="col-lg-9">
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
+                                                Manhã
+                                            </label>
+                                        </div>
+                                        <div class="radio radio-primary">
+                                            <label>
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
+                                                Noite
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Ciclo</label>
+                                    <div class="col-lg-9">
+                                        <select class="form-control" id="select">
+                                            <option value="1" selected="selected">Ciclo 1</option>
+                                        </select>
+                                    </div>
+                                </div>
 
 
-                            <legend>Dados do Curso</legend>
-                            <div class="form-group">
-                                <label for="select" class="col-lg-3 control-label">Nome do Cusrso</label>
-                                <div class="col-lg-9">
-                                    <select class="form-control" id="select">
-                                        <option value="1">Curso 1</option>
-                                        <option value="2">Curso 2</option>
-                                        <option value="3">Curso 3</option>
-                                    </select>
+
+                                <div class="form-group">
+                                    <div class="col-lg-10 col-lg-offset-2">
+                                        <button type="reset" class="btn btn-default">Cancelar</button>
+                                        <a id="btnEnviar" href="#row" class="btn btn-primary">Enviar</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="select" class="col-lg-3 control-label">Período Letivo</label>
-                                <div class="col-lg-9">
-                                    <select class="form-control" id="select">
-                                        <option value="Matutino">Matutino</option>
-                                        <option value="Vespertino">Vespertino</option>
-                                        <option value="Noturno">Noturno</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="select" class="col-lg-3 control-label">Campus</label>
-                                <div class="col-lg-9">
-                                    <select class="form-control" id="select">
-                                        <option value="A">Campus A</option>
-                                        <option value="B">Campus B</option>
-                                        <option value="C">Campus C</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputIncricao" class="col-lg-3 control-label">Nº de inscrição</label>
-                                <div class="col-lg-9">
-                                    <input type="text" class="form-control" id="inputIncricao" placeholder="Número de Inscrição">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="reset" class="btn btn-default">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary">Enviar</button>
-                                </div>
-                            </div>
+                            </section>
                         </fieldset>
                     </form>
                 </div>
@@ -234,11 +276,23 @@
         $(function () {
             $('#inputDataDeNascimento').bootstrapMaterialDatePicker(
                 {
-                    format: 'dd/MM/YY',
+                    format: 'DD/MM/YY',
                     time: false,
                     cancelText: 'CANCELAR',
                     lang: 'pt'
                 });
+
+            $('#btnContinuar').on('click', function () {
+                $('#sectionBtnContinuar').css("display", "none");
+                $('#sectionInstituicao').fadeIn('slow');
+            });
+
+            $('#btnEnviar').on('click', function() {
+                $('#sectionAluno,#sectionInstituicao').fadeOut('fast');
+                $('#sectionDivAlertSuccess').fadeIn('slow');
+
+
+            });
         })
     </script>
 </body>
