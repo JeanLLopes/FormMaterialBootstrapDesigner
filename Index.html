@@ -7,6 +7,7 @@
     <link href="Content/roboto.min.css" rel="stylesheet" />
     <link href="Content/material-fullpalette.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-material-datepicker.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="container">
@@ -35,100 +36,157 @@
                                 <legend>Dados Pessoais</legend>
                                 <div class="form-group">
                                     <label for="inputNome" class="col-lg-3 control-label">Nome</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-6">
                                         <input type="text" class="form-control" id="inputNome" placeholder="Nome">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputNomedoMeio" class="col-lg-3 control-label">Nome do Meio</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-6">
                                         <input type="text" class="form-control" id="inputNomedoMeio" placeholder="Nome do Meio">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputSobrenome" class="col-lg-3 control-label">Sobrenome</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-6">
                                         <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome">
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="inputNomePreferido" class="col-lg-3 control-label">Nome Preferido</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="inputNomePreferido" placeholder="Nome Preferido">
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="form-group">
                                     <label for="inputDataDeNascimento" class="col-lg-3 control-label">Data de Nascimento</label>
-                                    <div class="col-md-9">
+                                    <div class="col-md-3">
                                         <input type="text" id="inputDataDeNascimento" class="form-control empty" placeholder="Data de Nascimento">
                                     </div>
                                 </div>
+                                <br/>
                                 <div class="form-group">
-                                    <label class="col-lg-3 control-label">Sexo</label>
-                                    <div class="col-lg-9">
-                                        <div class="radio radio-primary">
-                                            <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
-                                                Masculino ( M )
-                                            </label>
-                                        </div>
-                                        <div class="radio radio-primary">
-                                            <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
-                                                Feminino ( F )
-                                            </label>
-                                        </div>
+                                    <label for="inputEstadoCivil" class="col-lg-3 control-label">Estado Civil</label>
+                                    <div class="col-lg-3">
+                                        <select class="form-control" id="inputEstadoCivil">
+                                            <option value=""></option>
+                                            <option value="S">Solteiro(a)</option>
+                                            <option value="C">Casado(a)</option>
+                                            <option value="D">Divorciado(a)</option>
+                                        </select>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="inputSexo" class="col-lg-3 control-label">Sexo</label>
+                                    <div class="col-lg-3">
+                                        <select class="form-control" id="inputSexo">
+                                            <option value=""></option>
+                                            <option value="M">Masculino</option>
+                                            <option value="F">Feminino</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                    <label for="inputRg" class="col-lg-3 control-label">Documento</label>
+                                    <div class="col-lg-2">
+                                        <select class="form-control" id="inputRg">
+                                            <option value=""></option>
+                                            <option value="RG">RG</option>
+                                            <option value="CPF">CPF</option>
+                                            <option value="Passaporte">Passaporte</option>
+                                        </select>
+                                    </div>
+                                    <label for="inputCpf" class="col-lg-1 control-label">N°</label>
+                                    <div class="col-lg-4">
+                                        <input type="text" class="form-control" id="inputCpf" placeholder="">
+                                    </div>
 
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Estado Civil</label>
-                                    <div class="col-lg-9">
-                                        <div class="radio radio-primary">
-                                            <label>
-                                                <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
-                                                Solteiro(a)
-                                            </label>
-                                        </div>
-                                        <div class="radio radio-primary">
-                                            <label>
-                                                <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
-                                                Casado(a)
-                                            </label>
-                                        </div>
-                                        <div class="radio radio-primary">
-                                            <label>
-                                                <input type="radio" name="optionsRadios1" id="optionsRadios3" value="option3"><span class="circle"></span><span class="check"></span>
-                                                Divorciado(a)
-                                            </label>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputRg" class="col-lg-3 control-label">RG</label>
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="inputRg" placeholder="RG">
+                                    <label for="inputPais" class="col-lg-3 control-label">Pais</label>
+                                    <div class="col-lg-1">
+                                        <input type="text" class="form-control" id="inputPais" placeholder="BRA">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputCpf" class="col-lg-3 control-label">CPF</label>
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="inputCpf" placeholder="CPF">
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
                                     </div>
+
                                 </div>
-                                <legend>Contatos</legend>
+                                <legend>Telefone</legend>
                                 <div class="form-group">
-                                    <label for="inputEmail" class="col-lg-3 control-label">Email</label>
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                    <label for="inputTipoTelefone" class="col-lg-3 control-label">Tipo de Telefone</label>
+                                    <div class="col-lg-2">
+                                        <select class="form-control" id="inputTipoTelefone">
+                                            <option value=""></option>
+                                            <option value="Residencial">Residêncial</option>
+                                            <option value="Celular">Celular</option>
+                                            <option value="Comercial">Comercial</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <div class="form-group">
                                     <label for="inputTelefone" class="col-lg-3 control-label">Telefone</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-3">
                                         <input type="text" class="form-control" id="inputTelefone" placeholder="Telefone">
                                     </div>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="inputRamal" class="col-lg-3 control-label">Ramal</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="inputRamal" placeholder="Ramal">
+                                    </div>
+                                    <label for="inputPrefixo" class="col-lg-3 control-label">Prefixo Internacional</label>
+                                    <div class="col-lg-3">
+                                        <input type="text" class="form-control" id="inputPrefixo" placeholder="Prefixo Internacional">
+                                    </div>
+
+                                </div>
+                                <br/>
+                                <legend>E-Mail</legend>
+                                <div class="form-group">
+                                    <label for="inputTipoEmail" class="col-lg-3 control-label">Tipo de Email</label>
+                                    <div class="col-lg-3">
+                                        <select class="form-control" id="inputTipoEmail">
+                                            <option value=""></option>
+                                            <option value="Particular">Particular</option>
+                                            <option value="Comercial">Comercial</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-3 control-label">E-mail</label>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="inputEmail" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <br/>
+
                                 <legend>Endereço</legend>
                                 <div class="form-group">
-                                    <label for="select" class="col-lg-3 control-label">Local</label>
-                                    <div class="col-lg-9">
+                                    <label for="select" class="col-lg-3 control-label">País</label>
+                                    <div class="col-lg-3">
+                                        <output>Brasil</output>   
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Tipo de Residência</label>
+                                    <div class="col-lg-3">
                                         <select class="form-control" id="select">
+                                            <option value=""></option>
+                                            <option value="Residencial">Residêncial</option>
+                                            <option value="Comercial">Comercial</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Tipo de Local</label>
+                                    <div class="col-lg-3">
+                                        <select class="form-control" id="select">
+                                            <option value=""></option>
                                             <option value="Avenida">Avenida</option>
                                             <option value="Estrada">Estrada</option>
                                             <option value="Rua">Rua</option>
@@ -137,46 +195,60 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputRua" class="col-lg-3 control-label">Rua</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-6">
                                         <input type="text" class="form-control" id="inputRua" placeholder="Rua">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputNumero" class="col-lg-3 control-label">Nº</label>
-                                    <div class="col-lg-9">
-                                        <input type="text" class="form-control" id="inputNumero" placeholder="Numero">
+                                    <label for="inputNumero" class="col-lg-1 control-label">Nº</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="inputNumero" placeholder="Número">
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="inputComplemento" class="col-lg-3 control-label">Complemento</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputComplemento" placeholder="Complemento">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputComplemento" class="col-lg-3 control-label">Complemento 2</label>
+                                    <div class="col-lg-9">
+                                        <input type="text" class="form-control" id="inputComplemento" placeholder="Complemento 2">
+                                    </div>
+                                </div>
+
                                 <div class="form-group">
                                     <label for="inputBairro" class="col-lg-3 control-label">Bairro</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-6">
                                         <input type="text" class="form-control" id="inputBairro" placeholder="Bairro">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputCEP" class="col-lg-3 control-label">CEP</label>
-                                    <div class="col-lg-9">
+                                    <label for="inputCEP" class="col-lg-1 control-label">CEP</label>
+                                    <div class="col-lg-2">
                                         <input type="text" class="form-control" id="inputCEP" placeholder="CEP">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCidade" class="col-lg-3 control-label">Cidade</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-6">
                                         <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
                                     </div>
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
+                                    </div>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEstado" class="col-lg-3 control-label">Estado</label>
-                                    <div class="col-lg-9">
-                                        <select class="form-control" id="inputEstado">
-                                            <option value="SP">São Paulo</option>
-                                            <option value="RJ">Rio de Janeiro</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <input type="text" class="form-control" id="inputEstado" placeholder="Estado">
                                     </div>
-                                </div>
-                                <div class="form-group" id="sectionBtnContinuar">
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
+                                    </div>
+                                    </div>
+                                <div class="form-group" id="sectionBtnProsseguir">
                                     <div class="col-lg-10 col-lg-offset-2">
-                                        <a id="btnContinuar" href="#sectionInstituicao" class="btn btn-primary">Continuar</a>
+                                        <a id="btnProsseguir" href="#sectionInstituicao" class="btn btn-primary">Prosseguir
+                                        </a>
                                     </div>
                                 </div>
 
@@ -184,81 +256,111 @@
                             <section id="sectionInstituicao" style="display: none">
                                 <legend>Dados do Curso</legend>
                                 <div class="form-group">
-                                    <label for="select" class="col-lg-3 control-label">Nome do Curso</label>
-                                    <div class="col-lg-9">
+                                    <label for="select" class="col-lg-3 control-label">Curso</label>
+                                    <div class="col-lg-4">
                                         <select class="form-control" id="select">
-                                            <option value="1">Curso Licenciatura em Linguagens</option>
-                                            <option value="2">Curso Linguagens</option>
-                                            <option value="3">Curso Licenciatura</option>
+                                            <option value=""></option>
+                                            <option value="1">Licenciatura em Linguagens</option>
+                                            <option value="2">Linguagens</option>
+                                            <option value="3">Licenciatura</option>
                                         </select>
+                                    </div>
+                                    <label for="select" class="col-lg-2 control-label">Cod do Curso</label>
+                                    <div class="col-lg-2">
+                                        <select class="form-control" id="select">
+                                            <option value=""></option>
+                                            <option value="2">0013</option>
+                                            <option value="3">0014</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Campus</label>
+                                    <div class="col-lg-2">
+                                        <select class="form-control" id="select">
+                                            <option value=""></option>
+                                            <option value="1">001</option>
+                                            <option value="2">002</option>
+                                            <option value="3">003</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="inputNomecampus" placeholder="Nome Campos">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="select" class="col-lg-3 control-label">Período Letivo</label>
-                                    <div class="col-lg-9">
+                                    <label class="col-lg-3 control-label">Turno Acadêmico</label>
+                                    <div class="col-lg-4">
+                                        <select class="form-control" id="select">
+                                            <option value=""></option>
+                                            <option value="1">Manhã</option>
+                                            <option value="2">Tarde</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--<div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Turno Acadêmico</label>
+                                    <div class="col-lg-6">
                                         <select class="form-control" id="select">
                                             <option value="1501">1º semeste de 2015</option>
                                             <option value="1502">2º semeste de 2015</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="form-group">
-                                    <label for="select" class="col-lg-3 control-label">Campus</label>
-                                    <div class="col-lg-9">
+                                    <label for="select" class="col-lg-3 control-label">Carreira Acadêmica</label>
+                                    <div class="col-lg-2">
                                         <select class="form-control" id="select">
-                                            <option value="A">Campus A</option>
-                                            <option value="B">Campus B</option>
-                                            <option value="C">Campus C</option>
+                                            <option value=""></option>
+                                            <option value="1">001</option>
+                                            <option value="2">002</option>
+                                            <option value="3">003</option>
                                         </select>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="inputNomecampus" placeholder="Carreira Acadêmica">
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="select" class="col-lg-3 control-label">Tipo de Inscrição</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="inputNomecampus" placeholder="">
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
+                                    </div>
+                                    <label for="select" class="col-lg-3 control-label">*Tipo de Admissão</label>
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control" id="inputNomecampus" placeholder="">
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <span class="glyphicon glyphicon-search" style="font-size: 20px"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="inputIncricao" class="col-lg-3 control-label">Nº de inscrição do ENEM</label>
-                                    <div class="col-lg-9">
+                                    <div class="col-lg-4">
                                         <input type="text" class="form-control" id="inputIncricao" placeholder="Número de Inscrição">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="select" class="col-lg-3 control-label">Tipo de Admisão</label>
-                                    <div class="col-lg-9">
-                                        <select class="form-control" id="select">
-                                            <option value="1">Vestibular</option>
-                                            <option value="2">ENEM</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-lg-3 control-label">Turno Acadêmico</label>
-                                    <div class="col-lg-9">
-                                        <div class="radio radio-primary">
-                                            <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""><span class="circle"></span><span class="check"></span>
-                                                Manhã
-                                            </label>
-                                        </div>
-                                        <div class="radio radio-primary">
-                                            <label>
-                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"><span class="circle"></span><span class="check"></span>
-                                                Noite
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="select" class="col-lg-3 control-label">Ciclo</label>
-                                    <div class="col-lg-9">
-                                        <select class="form-control" id="select">
-                                            <option value="1" selected="selected">Ciclo 1</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="form-group">
                                     <div class="col-lg-10 col-lg-offset-2">
                                         <button type="reset" class="btn btn-default">Cancelar</button>
-                                        <a id="btnEnviar" href="#row" class="btn btn-primary">Enviar</a>
+                                        <a id="btnConcluir" href="#row" class="btn btn-primary">Concluir</a>
                                     </div>
                                 </div>
                             </section>
@@ -282,12 +384,12 @@
                     lang: 'pt'
                 });
 
-            $('#btnContinuar').on('click', function () {
-                $('#sectionBtnContinuar').css("display", "none");
+            $('#btnProsseguir').on('click', function () {
+                $('#sectionBtnProsseguir').css("display", "none");
                 $('#sectionInstituicao').fadeIn('slow');
             });
 
-            $('#btnEnviar').on('click', function() {
+            $('#btnConcluir').on('click', function() {
                 $('#sectionAluno,#sectionInstituicao').fadeOut('fast');
                 $('#sectionDivAlertSuccess').fadeIn('slow');
 
